@@ -278,7 +278,7 @@ padding: 0 16px;
   cursor: pointer;
 }
 
-.modal-btn,
+/*.modal-btn,
 .modal-btn__phone {
   align-items: center;
   display: flex;
@@ -292,7 +292,7 @@ padding: 0 16px;
 .modal-btn__phone a {
   margin-left: 10px;
 }
-
+*/
 
 .header {
 background-color: var(--white-color);
@@ -314,18 +314,7 @@ justify-content: space-between;
   background-size: cover;
 }
 
-.header__left-logo::after {
-  content: '';
-  width: 2px;
-  height: 32px;
-  position: absolute;
-  top: 28px;
-  left: 186px;
-  background-image: url(../img/divider.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
+
 
 .header__block{
   justify-content: space-between;
@@ -815,15 +804,37 @@ button {
     transition: opacity 0.5s ease-in-out, max-height 1s ease-in-out;
   }
 
+  .header__left-logo::after {
+    content: '';
+    width: 2px;
+    height: 32px;
+    position: absolute;
+    top: 35px;
+    left: 186px;
+    background-image: url(../img/divider.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
   .burger-menu {
     display: none;
     transition: opacity 0.2s ease;
 }
 
-.icon-call,
-  .icon-chat,
-  .icon-profile{
-      display: none;
+  .icon-profile,
+  .phone,
+  .chat{
+    display: none;
+  }
+
+  .burger {
+    align-self: center;
+    margin-right: 16px;
+  }
+
+  .burger > svg {
+    vertical-align: top;
   }
 
 
@@ -965,9 +976,39 @@ button {
   .prices__table {
     display: none;
   }
+
+  .header__left-logo::after{
+    display: none;
+  }
+
+  .icon-repair::after{
+    content: '';
+    width: 2px;
+    height: 32px;
+    position: absolute;
+    top: 38px;
+    right: 140px;
+    background-image: url(../img/divider.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.icon-profile{
+  margin-right: 23px;
+    }
+
+.icon-profile, .phone, .chat{
+  display: flex;
+}
 }
 
 @media (min-width: 564px){
+
+  .icon-profile{
+    margin-right: 23px;
+      }
+
   .slider {
       padding-left: 24px;
       margin-bottom: 42px;
@@ -995,7 +1036,8 @@ button {
   }
 
   .header__left-logo::after{
-      left: 84px;
+    display: block;
+    left: 84px;
   }
 
   .container{
@@ -1007,22 +1049,8 @@ button {
       justify-content: space-between;
   }
 
-  .icon-profile::after{
-      content: '';
-      width: 2px;
-      height: 32px;
-      position: absolute;
-      top: 28px;
-      right: 140px;
-      background-image: url(../img/divider.svg);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-  }
-
   .icon-profile{
-      margin-right: 20px;
-      padding-right: 5px;
+    margin-right: 15px;
       }
 
       .services-title__list{
