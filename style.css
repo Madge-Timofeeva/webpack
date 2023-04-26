@@ -236,19 +236,21 @@ body {
   border-radius: 5px;
   cursor: pointer; }
 
-.modal-btn,
+/*.modal-btn,
 .modal-btn__phone {
   align-items: center;
   display: flex;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.2px;
-  color: #1b1c21; }
+  color: #1b1c21;
+}
 
 .modal-btn a,
 .modal-btn__phone a {
-  margin-left: 10px; }
-
+  margin-left: 10px;
+}
+*/
 .header {
   background-color: var(--white-color);
   border-bottom: 1px solid var(--aqua-light);
@@ -263,18 +265,6 @@ body {
   position: absolute;
   left: 0px;
   background-image: url(./static/slash.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover; }
-
-.header__left-logo::after {
-  content: '';
-  width: 2px;
-  height: 32px;
-  position: absolute;
-  top: 28px;
-  left: 186px;
-  background-image: url(./static/divider.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
@@ -680,13 +670,29 @@ button {
     opacity: 1;
     max-height: 500px;
     transition: opacity 0.5s ease-in-out, max-height 1s ease-in-out; }
+  .header__left-logo::after {
+    content: '';
+    width: 2px;
+    height: 32px;
+    position: absolute;
+    top: 35px;
+    left: 186px;
+    background-image: url(./static/divider.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; }
   .burger-menu {
     display: none;
     transition: opacity 0.2s ease; }
-  .icon-call,
-  .icon-chat,
-  .icon-profile {
+  .icon-profile,
+  .phone,
+  .chat {
     display: none; }
+  .burger {
+    align-self: center;
+    margin-right: 16px; }
+  .burger > svg {
+    vertical-align: top; }
   .services-title__list {
     display: none; }
   .services__tab-text2 {
@@ -782,9 +788,28 @@ button {
 
 @media (min-width: 478px) {
   .prices__table {
-    display: none; } }
+    display: none; }
+  .header__left-logo::after {
+    display: none; }
+  .icon-repair::after {
+    content: '';
+    width: 2px;
+    height: 32px;
+    position: absolute;
+    top: 38px;
+    right: 140px;
+    background-image: url(./static/divider.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; }
+  .icon-profile {
+    margin-right: 23px; }
+  .icon-profile, .phone, .chat {
+    display: flex; } }
 
 @media (min-width: 564px) {
+  .icon-profile {
+    margin-right: 23px; }
   .slider {
     padding-left: 24px;
     margin-bottom: 42px; }
@@ -802,26 +827,15 @@ button {
   .icon-profile {
     display: flex; }
   .header__left-logo::after {
+    display: block;
     left: 84px; }
   .container {
     padding: 0 24px; }
   .header__left {
     width: 25%;
     justify-content: space-between; }
-  .icon-profile::after {
-    content: '';
-    width: 2px;
-    height: 32px;
-    position: absolute;
-    top: 28px;
-    right: 140px;
-    background-image: url(./static/divider.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover; }
   .icon-profile {
-    margin-right: 20px;
-    padding-right: 5px; }
+    margin-right: 15px; }
   .services-title__list {
     display: none; }
   .services__tab-text2 {
